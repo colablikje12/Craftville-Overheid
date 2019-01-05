@@ -7,12 +7,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class OverheidListener implements Listener {
-	public OverheidListener() {
-		
-	}
 	
 	@EventHandler
-	public void Login(PlayerJoinEvent event) {
+	public void onJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		String name = player.getName();
 		
@@ -43,7 +40,7 @@ public class OverheidListener implements Listener {
 	}
 	
 	@EventHandler
-	public void leave (PlayerQuitEvent event) {
+	public void onQuit(PlayerQuitEvent event) {
 		Player player = event.getPlayer();
 		String name = player.getName();
 		
